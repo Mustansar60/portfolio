@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustansar Maqsood | DevOps Engineer</title>
+<style>
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.container {
+  max-width: 900px;
+  background: #111827;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  animation: fade 1.5s ease;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.highlight {
+  color: #38bdf8;
+}
+p {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #cbd5f5;
+}
+.skills {
+  margin-top: 25px;
+}
+.skill {
+  display: inline-block;
+  background: #1f2937;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  background: #0ea5e9;
+}
+#quote {
+  margin-top: 20px;
+  font-style: italic;
+  color: #94a3b8;
+}
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* --- Fade Animation --- */
+@keyframes fade {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  h1 { font-size: 36px; }
+  .container { padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Mustansar <span class="highlight">Maqsood</span></h1>
+  <p>DevOps Engineer | Cloud Enthusiast | Automation Lover</p>
+  <p>I build scalable infrastructure, automate deployments, and design modern cloud systems.</p>
+
+  <div class="skills">
+    <span class="skill">Docker</span>
+    <span class="skill">Kubernetes</span>
+    <span class="skill">AWS</span>
+    <span class="skill">CI/CD</span>
+    <span class="skill">Python</span>
+    <span class="skill">Linux</span>
+  </div>
+
+  <button onclick="generateQuote()">Motivate Me 🚀</button>
+  <p id="quote"></p>
+
+  <footer>Built with ❤️ by Mustansar Maqsood</footer>
+</div>
+
+<script>
+const quotes = [
+  "Automation is the future of infrastructure.",
+  "Great engineers build systems that run themselves.",
+  "DevOps is not a tool, it's a culture.",
+  "Small improvements daily lead to massive success.",
+  "Cloud + Automation = Infinite possibilities.",
+  "CI/CD is the heartbeat of modern DevOps.",
+  "Your code should deploy itself, not your stress."
+];
+
+function generateQuote() {
+  const random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerText = quotes[random];
+}
+</script>
+
+</body>
+</html>
