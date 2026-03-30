@@ -8,10 +8,11 @@ on:
 
 jobs:
   deploy:
+    name: Deploy to AWS S3
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Configure AWS credentials
@@ -19,15 +20,16 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: eu-north-1
 
-      - name: Sync files to S3 bucket
+      - name: Deploy to S3
         run: |
           aws s3 sync . s3://mustansarportfolio \
             --delete \
+            --exact-timestamps \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "README.md"
 
-      - name: Show deployed files
+      - name: Verify deployment
         run: aws s3 ls s3://mustansarportfolio --recursive
