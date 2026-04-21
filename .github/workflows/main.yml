@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
-    name: Deploy to AWS S3
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,14 +19,21 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-north-1
 
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        working-directory: ./infra
+        run: terraform init
+
+      - name: Terraform Apply
+        working-directory: ./infra
+        run: terraform apply -auto-approve
+
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://mustansarportfolio \
-            --delete \
-            --exact-timestamps \
+          aws s3 sync . s3://mustansar.haseebxbiz.dev \
             --exclude ".git/*" \
             --exclude ".github/*" \
-            --exclude "README.md"
-
-      - name: Verify deployment
-        run: aws s3 ls s3://mustansarportfolio --recursive
+            --exclude "infra/*" \
+            --delete
