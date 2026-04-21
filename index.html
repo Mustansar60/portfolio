@@ -1,135 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustansar Maqsood | DevOps Engineer</title>
-<style>
-/* --- Reset & Base --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', Helvetica, sans-serif;
-}
-body {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-.container {
-  max-width: 900px;
-  background: #111827;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
-  animation: fade 1.5s ease;
-}
-h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-.highlight {
-  color: #38bdf8;
-}
-p {
-  margin: 12px 0;
-  font-size: 18px;
-  color: #cbd5f5;
-}
-.skills {
-  margin-top: 25px;
-}
-.skill {
-  display: inline-block;
-  background: #1f2937;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  font-size: 14px;
-}
-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  background: #38bdf8;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  transform: scale(1.05);
-  background: #0ea5e9;
-}
-#quote {
-  margin-top: 20px;
-  font-style: italic;
-  color: #94a3b8;
-}
-footer {
-  margin-top: 30px;
-  font-size: 14px;
-  color: #64748b;
-}
-
-/* --- Fade Animation --- */
-@keyframes fade {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Responsive --- */
-@media (max-width: 600px) {
-  h1 { font-size: 36px; }
-  .container { padding: 25px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustansar Maqsood | DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Mustansar <span class="highlight">Maqsood</span></h1>
-  <p>DevOps Engineer | Cloud Enthusiast | Automation Lover</p>
-  <p>I build scalable infrastructure, automate deployments, and design modern cloud systems.</p>
+    <header class="min-h-screen flex items-center justify-center px-6">
+        <div class="max-w-4xl text-center">
+            <h2 class="text-blue-400 font-semibold tracking-widest uppercase mb-4">Available for New Opportunities</h2>
+            <h1 class="text-6xl md:text-8xl font-bold mb-6">Mustansar <span class="gradient-text">Maqsood</span></h1>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                DevOps Engineer specializing in automating scalable cloud infrastructure, orchestrating containers, and building robust CI/CD pipelines.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full font-bold transition">View My Work</a>
+                <a href="#contact" class="border border-gray-700 hover:border-blue-400 px-8 py-3 rounded-full font-bold transition text-gray-300">Contact Me</a>
+            </div>
+        </div>
+    </header>
 
-  <div class="skills">
-    <span class="skill">Docker</span>
-    <span class="skill">Kubernetes</span>
-    <span class="skill">AWS</span>
-    <span class="skill">CI/CD</span>
-    <span class="skill">Python</span>
-    <span class="skill">Linux</span>
-  </div>
+    <section class="py-20 px-6 bg-[#1e293b]">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center">Core <span class="text-blue-400">Expertise</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-[#0f172a] rounded-2xl border border-gray-800 card">
+                    <i class="fa-solid fa-cloud text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Cloud & Infrastructure</h4>
+                    <p class="text-gray-400 text-sm">AWS (VPC, EC2, IAM, S3, RDS), Azure, and GCP environment management.</p>
+                </div>
+                <div class="p-8 bg-[#0f172a] rounded-2xl border border-gray-800 card">
+                    <i class="fa-solid fa-cubes text-purple-400 text-3xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Containerization</h4>
+                    <p class="text-gray-400 text-sm">Mastering Docker & Kubernetes for scalable application orchestration.</p>
+                </div>
+                <div class="p-8 bg-[#0f172a] rounded-2xl border border-gray-800 card">
+                    <i class="fa-solid fa-code-commit text-green-400 text-3xl mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">CI/CD & IaC</h4>
+                    <p class="text-gray-400 text-sm">Terraform for Infrastructure as Code and GitHub Actions for automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <button onclick="generateQuote()">Motivate Me 🚀</button>
-  <p id="quote"></p>
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12">Featured <span class="text-blue-400">Work</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl bg-[#1e293b]">
+                    <div class="p-8">
+                        <span class="text-xs text-blue-400 font-mono">AUTOMATION</span>
+                        <h4 class="text-2xl font-bold mt-2 mb-4">CI/CD Pipeline Design</h4>
+                        <p class="text-gray-400 mb-6">Built automated build and deployment pipelines using GitHub Actions, reducing manual overhead by 70%.</p>
+                        <div class="flex gap-3 text-sm font-mono text-gray-500">
+                            <span>GitHub Actions</span> <span>Docker</span> <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl bg-[#1e293b]">
+                    <div class="p-8">
+                        <span class="text-xs text-purple-400 font-mono">CLOUD INFRASTRUCTURE</span>
+                        <h4 class="text-2xl font-bold mt-2 mb-4">AWS Scalable Architecture</h4>
+                        <p class="text-gray-400 mb-6">Designed secure VPC networking with private subnets and IAM least-privilege models for high-security environments.</p>
+                        <div class="flex gap-3 text-sm font-mono text-gray-500">
+                            <span>Terraform</span> <span>VPC</span> <span>IAM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>Built with ❤️ by Mustansar Maqsood</footer>
-</div>
+    <section class="py-20 px-6 bg-[#0f172a]">
+        <div class="max-w-4xl mx-auto border-l-2 border-blue-600 pl-8">
+            <h3 class="text-3xl font-bold mb-8 italic">"Building the bridges between code and production."</h3>
+            <p class="text-gray-400 leading-relaxed mb-6">
+                Currently working at <span class="text-white font-bold">Avalon Innovations</span> and <span class="text-white font-bold">Obsyra Tech</span>, I manage containerized workloads and maintain optimized CI/CD workflows for production-ready systems.
+            </p>
+        </div>
+    </section>
 
-<script>
-const quotes = [
-  "Automation is the future of infrastructure.",
-  "Great engineers build systems that run themselves.",
-  "DevOps is not a tool, it's a culture.",
-  "Small improvements daily lead to massive success.",
-  "Cloud + Automation = Infinite possibilities.",
-  "CI/CD is the heartbeat of modern DevOps.",
-  "Your code should deploy itself, not your stress."
-];
-
-function generateQuote() {
-  const random = Math.floor(Math.random() * quotes.length);
-  document.getElementById("quote").innerText = quotes[random];
-}
-</script>
+    <footer id="contact" class="py-20 px-6 text-center">
+        <h3 class="text-4xl font-bold mb-8">Let's build something <span class="gradient-text">stable.</span></h3>
+        <div class="flex justify-center gap-8 mb-12 text-2xl">
+            <a href="https://linkedin.com/in/mustansar60" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Mustansar60" class="hover:text-gray-400 transition"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:mustansarm60@gmail.com" class="hover:text-red-400 transition"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-500 text-sm">© 2026 Mustansar Maqsood. Built with AWS & GitHub Actions.</p>
+    </footer>
 
 </body>
 </html>
